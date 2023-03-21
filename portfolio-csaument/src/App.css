@@ -1,0 +1,133 @@
+:root {
+      --base-color: rgb(255, 255, 255);
+      --mid-color: rgb(188, 188, 188);
+      --high-color: rgb(255, 234, 0);
+      --accent-color1: rgb(255, 47, 238);
+      --accent-color2: rgb(0, 255, 204);
+      --accent-color3: rgb(0, 0, 0);
+}
+
+* {
+      /* background-color: var(--base-color);
+      color: var(--accent-color2); */
+      align-items: center;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+}
+
+.header {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      background-color: var(--mid-color);
+}
+
+.menuItem {
+      transition: 500ms;
+      height: 50px;
+      width: 50px;
+      border: 2px solid var(--accent-color1);
+      background-color: var(--mid-color);
+}
+
+.menuItem:hover {
+      transition: 500ms;
+      border: 2px solid var(--high-color);
+}
+
+.about {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      max-width: 95%;
+      padding: 10px;
+}
+
+.aboutPara {
+      padding: 10px;
+}
+
+.photo {
+      height: 150px;
+}
+
+.icon {
+      height: 50 px;
+      width: 50px;
+}
+
+.projects {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+}
+
+.work {
+      transition: 800ms ease;
+      height: 300px;
+      width: 184px;
+      border: 2px solid var(--accent-color1);
+      background-color: var(--mid-color);
+      padding: 10px;
+      margin: 10px;
+}
+
+.work:hover {
+      transition: 800ms ease;
+      width: 485px;
+      border: 2px solid var(--high-color);
+}
+
+.projectPhoto {
+      height: 200px;
+}
+
+.experience {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+}
+
+.story {
+      transition: 800ms ease;
+      height: 300px;
+      width: 184px;
+      border: 2px solid var(--accent-color1);
+      background-color: var(--mid-color);
+      padding: 10px;
+      margin: 10px;
+}
+
+.story:hover {
+      transition: 800ms ease;
+      width: 485px;
+      border: 2px solid var(--high-color);
+}
+
+.contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+}
+
+.contactForm {
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      margin: 5px;
+}
+
+input {
+      margin: 5px;
+}
+
+#messageBox {
+      height: 100px;
+      width: 400px;
+      resize: vertical;
+      word-wrap: break-word;
+      word-break: break-all;
+}
