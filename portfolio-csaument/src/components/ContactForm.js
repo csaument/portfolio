@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import emailjs from '@emailjs/browser'
 
 const ContactForm = () => {
       // Create React states for contact form data
@@ -12,25 +13,64 @@ const ContactForm = () => {
             setFName(fName)
       }
 
-
       // Create a function for validating form submission
       // References React State values and returns a boolean response on whether the form data are valid
-      const validateForm = () => {
+      const handleSubmit = (e) => {
+            // Prevent the browser from reloading the page
+            e.preventDefault();
 
+            // Check that a valid email is provided
+            if(!validateEmail(email)) {
+                  alert('Please provide a valid email.')
+            // Check that all form data have been provided
+            } else if('' === fName || '' === lName || '' === message) {
+                  alert('Please complete all items.')
+            // Send email through EmailJS
+            } else {
+                  alert('Thank you for your submission!')
+                  emailjs.send('service_6wfgdhb', 'template_wwv7hq4', {from_fname: fName, from_lname: lName, message: message, from_email: email}, 'zX53VxOInIN5CXQMF');
+            }
+      }
+
+      // Create a function to validate emails
+      // Returns true if valid or false if not
+      const validateEmail = (input) => {
+            // Create a RegExp of valid characters
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+            // Run through logic to check
+            if (!input.includes('@')) {
+                  return false;
+            } else if (input.match(validRegex)){
+                  return true;
+            } else {
+                  return false;
+            }
       }
 
       return (
             <div>
                   <form action='/action_page.php' className='contactForm'>
-                        <label for='fname'>First Name:</label>
-                        <input type='text'></input>
-                        <label for='lname'>Last Name:</label>
-                        <input type='text'></input>
-                        <label for='email'>email:</label>
-                        <input type='email'></input>
-                        <label for='message'>Message:</label>
-                        <textarea id='messageBox'></textarea>
-                        <input type='submit' value='Submit' onClick={validateForm}/>
+                        <label>First Name:
+                              <input
+                              value={fName}
+                              onChange={e => setFName(e.target.value)}/></label>
+                        <label>Last Name:
+                        <input
+                              value={lName}
+                              onChange={e => setLName(e.target.value)}/></label>
+                        <label>email:
+                        <input
+                              value={email}
+                              onChange={e => setEmail(e.target.value)}/></label>
+                        <label>Message:
+                              <textarea
+                              id='messageBox'
+                              defaultValue="Please enter a message here!"
+                              onChange={e => setMessage(e.target.value)}
+                              rows={4}
+                              cols={40}/></label>
+                        <button type='submit' onClick={handleSubmit}>Submit!</button>
                   </form>
             </div>
       )
