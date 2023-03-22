@@ -140,6 +140,7 @@ h2 {
       color: transparent;
       text-align: justify;
       line-height: normal;
+      overflow-y: auto;
 }
 
 .desc > text {
