@@ -28,7 +28,10 @@ const ContactForm = () => {
             // Send email through EmailJS
             } else {
                   alert('Thank you for your submission!')
-                  emailjs.send('service_6wfgdhb', 'template_wwv7hq4', {from_fname: fName, from_lname: lName, message: message, from_email: email}, 'zX53VxOInIN5CXQMF');
+                  emailjs.send('service_6wfgdhb', 
+                        'template_8k8y08w',
+                        {from_fname: fName, from_lname: lName, message: message, from_email: email},
+                        'zX53VxOInIN5CXQMF');
             }
       }
 
