@@ -14,7 +14,7 @@ const Header = () => {
 
       return (<>
             <div className='header'>
-                  {menuItems.map((item, index) => <MenuItem title={item.title} href= {item.href} photo={item.photo} index={index}/>)}
+                  {menuItems.map((item, index) => <a href= {item.href}><MenuItem title={item.title} photo={item.photo} index={index}/></a>)}
             </div>
       </>)
 }
