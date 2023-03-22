@@ -136,7 +136,7 @@ h2 {
       right: 15px;
       transform: translate(0, -50%);
       height: 70%;
-      width: 65%;
+      width: 100%;
       color: transparent;
       text-align: justify;
       line-height: normal;
@@ -144,6 +144,7 @@ h2 {
 
 .desc > text {
       margin: auto;
+      font-size: 2em;
 }
 
 
@@ -181,6 +182,7 @@ h2 {
       background: rgba(255, 255, 255, .7);
       border-radius: 10px;
       padding: 5px;
+      width: 63%;
 }
 
 .work:hover > img {
