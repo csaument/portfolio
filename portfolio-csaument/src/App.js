@@ -13,11 +13,11 @@ const App = () => {
 
       return (<>
             <Header />
-            <div className='about'><About /></div>
-            <div className='projects'><Projects /></div>
-            <div className='experience'><Experience /></div>
-            <div className='contact'><Contact /></div>
-            <div className='footer'><Footer /></div>
+            <a id='about'><About /></a>
+            <a id='projects'><Projects /></a>
+            <a id='experience'><Experience /></a>
+            <a id='contact'><Contact /></a>
+            <a className='footer'><Footer /></a>
       </>)
 }
 

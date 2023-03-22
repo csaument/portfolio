@@ -3,11 +3,11 @@ import React from 'react'
 const Work = ({title, desc, photo, code, tech}) => {
   return (
     <div className='work'>
-      <img src={photo} alt={title} className='projectPhoto'/>
-      <div>{title}</div>
-      <div>{desc}</div>
-      <div>{code}</div>
-      <div>{tech}</div>
+      <img src={Object.values(photo)} alt={title} className='projectPhoto'/>
+      <div className='title'>{title}</div>
+      <div className='desc'>{desc}</div>
+      <div className='code'>{code}</div>
+      <div className='tech'>{tech}</div>
     </div>
   )
 }
