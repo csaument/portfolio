@@ -5,6 +5,7 @@ import linkedInIco from '../assets/linkedin.png'
 
 const Contact = () => {
       return (
+            <div className='contact'>
             <div className='contacts'>
                   <h2>Contact</h2>
                   <a href='https://github.com/csaument' target='_blank'>
@@ -20,6 +21,7 @@ const Contact = () => {
                         className='icon'/>
                   </a>
                   <ContactForm/>
+            </div>
             </div>
       )
 }
