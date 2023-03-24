@@ -133,7 +133,7 @@ h2 {
       transition: 800ms ease;
       position: absolute;
       top: 50%;
-      right: 15px;
+      right: 1vmin;
       transform: translate(0, -50%);
       height: 70%;
       width: 100%;
@@ -150,21 +150,21 @@ h2 {
 
 
 .live {
-      height: 2vmin;
-      width: 2vmin;
+      height: 3vmin;
+      width: 3vmin;
       position: absolute;
-      bottom: 15px;
-      right: 45px;
+      bottom: 1vmin;
+      right: 5vmin;
       background: rgba(255, 255, 255, .7);
       border-radius: 20px;
 }
 
 .code {
-      height: 2vmin;
-      width: 2vmin;
+      height: 3vmin;
+      width: 3vmin;
       position: absolute;
-      bottom: 15px;
-      right: 15px;
+      bottom: 1vmin;
+      right: 1vmin;
       background: rgba(255, 255, 255, .7);
       border-radius: 20px;
 }
@@ -227,6 +227,21 @@ h2 {
       /* need setting to keep focused box in page margins */
 }
 
+.story:hover > .desc {
+      transition-delay: 1000ms;
+      transition: 800ms ease;
+      color: black;
+      background: rgba(255, 255, 255, .7);
+      border-radius: 10px;
+      padding: 5px;
+      width: 63%;
+      overflow-y: auto;
+}
+
+.story:hover > img {
+      filter: blur(2px);
+}
+
 /* CONTACT BAR */
 
 .contact {
@@ -250,10 +265,11 @@ h2 {
 
 input {
       margin: 2vh;
+      height: 2vmin;
 }
 
 #messageBox {
-      height: 100px;
+      height: 10vmin;
       width: 30vmin;
       resize: vertical;
       word-wrap: break-word;

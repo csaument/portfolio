@@ -13,7 +13,7 @@ const Work = ({title, desc, photo, code, live, tech}) => {
       <div className='title'>{title}</div>
       <div className='desc'>{desc}</div>
       {live && <a href={live} target='_blank'> <img src={cog} alt='live page' className='live' /></a>}
-      <a href={code} target='_blank'> <img src={github} alt='code' className='code' /></a>
+      {code && <a href={code} target='_blank'> <img src={github} alt='code' className='code' /></a>}
       {/* <div className='tech'>{tech}</div> */}
     </div>
   )

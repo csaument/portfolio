@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Story = () => {
+const Story = ({title, desc, photo}) => {
       return (<>
             <div className='story'>
-                  <div>Title</div>
-                  <div>Photo</div>
-                  <div>Description</div>
+                  <img src={Object.values(photo)} alt={title} className='projectPhoto' />
+                  <div className='title'>{title}</div>
+                  <div className='desc'>{desc}</div>
             </div>
             </>)
 }
