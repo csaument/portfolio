@@ -8,11 +8,6 @@ const ContactForm = () => {
       const [email, setEmail] = useState('')
       const [message, setMessage] = useState('')
 
-      // Create a function for updating state data on click
-      const updateState = () => {
-            setFName(fName)
-      }
-
       // Create a function for validating form submission
       // References React State values and returns a boolean response on whether the form data are valid
       const handleSubmit = (e) => {
@@ -22,9 +17,6 @@ const ContactForm = () => {
             // Check that a valid email is provided
             if(!validateEmail(email)) {
                   alert('Please provide a valid email.')
-            // Check that all form data have been provided
-            } else if('' === fName || '' === lName || '' === message) {
-                  alert('Please complete all items.')
             // Send email through EmailJS
             } else {
                   alert('Thank you for your submission!')
@@ -56,24 +48,33 @@ const ContactForm = () => {
                   <form action='/action_page.php' className='contactForm'>
                         <label>First Name:
                               <input
-                              value={fName}
-                              onChange={e => setFName(e.target.value)}/></label>
+                                    value={fName}
+                                    onChange={e => setFName(e.target.value)}
+                                    required />
+                        </label>
                         <label>Last Name:
-                        <input
-                              value={lName}
-                              onChange={e => setLName(e.target.value)}/></label>
+                              <input
+                                    value={lName}
+                                    onChange={e => setLName(e.target.value)}
+                                    required />
+                              </label>
                         <label>email:
-                        <input
-                              value={email}
-                              onChange={e => setEmail(e.target.value)}/></label>
+                              <input
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
+                                    required />
+                        </label>
                         <label>Message:
                               <textarea
-                              id='messageBox'
-                              defaultValue="Please enter a message here!"
-                              onChange={e => setMessage(e.target.value)}
-                              rows={4}
-                              cols={40}/></label>
-                        <button type='submit' onClick={handleSubmit}>Submit!</button>
+                                    id='messageBox'
+                                    defaultValue="Please enter a message here!"
+                                    onChange={e => setMessage(e.target.value)}
+                                    rows={4}
+                                    cols={40}
+                                    required />
+                        </label>
+                        <button type='submit' onClick={handleSubmit}>Submit!
+                        </button>
                   </form>
             </div>
       )
