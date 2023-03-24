@@ -227,6 +227,21 @@ h2 {
       /* need setting to keep focused box in page margins */
 }
 
+.story:hover > .desc {
+      transition-delay: 1000ms;
+      transition: 800ms ease;
+      color: black;
+      background: rgba(255, 255, 255, .7);
+      border-radius: 10px;
+      padding: 5px;
+      width: 63%;
+      overflow-y: auto;
+}
+
+.story:hover > img {
+      filter: blur(2px);
+}
+
 /* CONTACT BAR */
 
 .contact {

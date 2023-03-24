@@ -22,10 +22,10 @@ const Contact = () => {
                         alt='LinkedIn Profile'
                         className='icon'/>
                   </a>
-                  <img 
+                  {/* <img 
                         src={qr}
-                        alt='LinkedIn Profile'
-                        className='icon'/>
+                        alt='vCard'
+                        className='icon'/> */}
                   </div>
                   <ContactForm/>
             </div>
