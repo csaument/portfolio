@@ -26,7 +26,7 @@ const Experience = () => {
             <div className='experience'>
                   <h2>Experience</h2>
                   <div className='track'>
-                        {stories.map((story, index) => <Story title={story.title} desc={story.desc} photo={story.photo} />)}
+                        {stories.map((story, index) => <Story title={story.title} desc={story.desc} photo={story.photo} index={index} />)}
                   </div>
             </div>
       </>)
