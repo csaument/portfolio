@@ -1,11 +1,39 @@
 :root {
-      --base-color: rgb(255, 255, 255);
-      --mid-color: rgb(188, 188, 188);
-      --high-color: rgb(255, 234, 0);
-      --accent-color1: rgb(255, 47, 238);
-      --accent-color2: rgb(0, 255, 204);
-      --accent-color3: rgb(0, 98, 255);
+            --base-color: rgb(255, 255, 255);
+            --back-text: rgba(255, 255, 255, .7);
+            --mid-color: rgb(188, 188, 188);
+            --high-color: rgb(255, 234, 0);
+            --accent-color1: rgb(255, 47, 238);
+            --accent-color2: rgb(0, 255, 204);
+            --accent-color3: rgb(0, 98, 255);
+            --text-color: black;
 }
+@media screen and (prefers-color-scheme: dark) {
+      :root {
+            --base-color: rgb(0, 0, 0);
+            --back-text: rgba(0, 0, 0, .7);
+            --mid-color: rgb(188, 188, 188);
+            --high-color: rgb(255, 234, 0);
+            --accent-color1: rgb(255, 47, 238);
+            --accent-color2: rgb(0, 255, 204);
+            --accent-color3: rgb(0, 98, 255);
+            --text-color: rgb(255, 255, 255);
+      }
+}
+
+/* @media (orientation: landscape) {
+      
+}
+  
+@media (orientation: portrait) {
+      
+} */
+
+/* @media (hover: hover) {
+      a:hover {
+        
+      }
+} */
 
 * {
       /* background-color: var(--base-color);
@@ -14,6 +42,7 @@
       text-align: center;
       font-family: 'Lato', sans-serif;
       scroll-behavior: smooth;
+      color: var(--text-color)
 }
 
 body {
@@ -123,7 +152,7 @@ h2 {
       transform: translate(-50%, 0);
       font-size: 20px;
       font-weight: bold;
-      background: rgba(255, 255, 255, .7);
+      background: var(--back-text);
       border-radius: 10px;
       padding: 5px;
 }
@@ -155,7 +184,7 @@ h2 {
       position: absolute;
       bottom: 1vmin;
       right: 5vmin;
-      background: rgba(255, 255, 255, .7);
+      background: var(--back-text);
       border-radius: 20px;
 }
 
@@ -165,7 +194,7 @@ h2 {
       position: absolute;
       bottom: 1vmin;
       right: 1vmin;
-      background: rgba(255, 255, 255, .7);
+      background: var(--back-text);
       border-radius: 20px;
 }
 
@@ -179,8 +208,8 @@ h2 {
 .work:hover > .desc {
       transition-delay: 1000ms;
       transition: 800ms ease;
-      color: black;
-      background: rgba(255, 255, 255, .7);
+      color: var(--text-color);
+      background: var(--back-text);
       border-radius: 10px;
       padding: 5px;
       width: 63%;
@@ -230,8 +259,8 @@ h2 {
 .story:hover > .desc {
       transition-delay: 1000ms;
       transition: 800ms ease;
-      color: black;
-      background: rgba(255, 255, 255, .7);
+      color: var(--text-color);
+      background:var(--back-text);
       border-radius: 10px;
       padding: 5px;
       width: 63%;
