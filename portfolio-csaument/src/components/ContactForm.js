@@ -49,18 +49,21 @@ const ContactForm = () => {
                         <label>First Name:
                               <input
                                     value={fName}
+                                    className='textBox'
                                     onChange={e => setFName(e.target.value)}
                                     required />
                         </label>
                         <label>Last Name:
                               <input
                                     value={lName}
+                                    className='textBox'
                                     onChange={e => setLName(e.target.value)}
                                     required />
                               </label>
                         <label>email:
                               <input
                                     value={email}
+                                    className='textBox'
                                     onChange={e => setEmail(e.target.value)}
                                     required />
                         </label>
@@ -70,7 +73,6 @@ const ContactForm = () => {
                                     defaultValue="Please enter a message here!"
                                     onChange={e => setMessage(e.target.value)}
                                     rows={4}
-                                    cols={40}
                                     required />
                         </label>
                         <button type='submit' onClick={handleSubmit}>Submit!

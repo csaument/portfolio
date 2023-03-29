@@ -318,17 +318,30 @@ h2 {
       margin: 5px;
 }
 
-input {
-      margin: 2vh;
-      height: 2vmin;
+.textBox { 
+      margin: 5px;
+      height: 3vmin;
+      width: 30vmin;
+      border: 2px solid rgba(0,0,0,0);
+      border-radius: 10px;
+}
+
+.textBox:hover{
+      border: 2px solid var(--accent-color2);
 }
 
 #messageBox {
+      margin: 5px;
       height: 10vmin;
       width: 30vmin;
+      border: 2px solid rgba(0,0,0,0);
+      border-radius: 10px;
       resize: vertical;
-      word-wrap: break-word;
-      word-break: break-all;
+      word-wrap: normal;
+}
+
+#messageBox:hover{
+      border: 2px solid var(--accent-color2);
 }
 
 button {
