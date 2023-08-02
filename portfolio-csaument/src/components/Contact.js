@@ -2,6 +2,7 @@ import React from 'react'
 import ContactForm from './ContactForm'
 import gitHubIco from '../assets/github.png'
 import linkedInIco from '../assets/linkedin.png'
+import ega from '../assets/ega.png'
 import qr from '../assets/QR.svg'
 
 const Contact = () => {
@@ -20,6 +21,12 @@ const Contact = () => {
                   <img 
                         src={linkedInIco}
                         alt='LinkedIn Profile'
+                        className='icon'/>
+                  </a>
+                  <a href='https://www.marforres.marines.mil/Units/4th-Marine-Division/23rd-Marine-Regiment/2nd-Battalion/Weapons-Company/' target='_blank'>
+                  <img 
+                        src={ega}
+                        alt='Unit Page'
                         className='icon'/>
                   </a>
                   {/* <img 
